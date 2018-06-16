@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B001C1E1CBFB99271FC85FC6 /* Pods_AngelHackDarkWire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D79160520AB016EB4146A74 /* Pods_AngelHackDarkWire.framework */; };
+		ED35023F20D56E45005BFC76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35023E20D56E45005BFC76 /* LoginViewController.swift */; };
 		ED878A2C20D4CB1A00DC3AC3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */; };
 		ED878A2E20D4CB2C00DC3AC3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */; };
 		ED878A3020D4CB3300DC3AC3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */; };
@@ -18,13 +20,18 @@
 		ED878A3E20D4CC1900DC3AC3 /* AgoraSigKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3D20D4CC1900DC3AC3 /* AgoraSigKit.framework */; };
 		ED9C5AC620D4C69E0034F752 /* AgoraConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */; };
 		EDAB19E520D4A6AD00573020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB19E420D4A6AD00573020 /* AppDelegate.swift */; };
-		EDAB19E720D4A6AD00573020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB19E620D4A6AD00573020 /* ViewController.swift */; };
+		EDAB19E720D4A6AD00573020 /* DialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB19E620D4A6AD00573020 /* DialViewController.swift */; };
 		EDAB19EA20D4A6AD00573020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB19E820D4A6AD00573020 /* Main.storyboard */; };
 		EDAB19EC20D4A6AD00573020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDAB19EB20D4A6AD00573020 /* Assets.xcassets */; };
 		EDAB19EF20D4A6AD00573020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB19ED20D4A6AD00573020 /* LaunchScreen.storyboard */; };
+		EDDEDE8520D58F210002A8CE /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEDE8420D58F210002A8CE /* CallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D79160520AB016EB4146A74 /* Pods_AngelHackDarkWire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AngelHackDarkWire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB680D69A190B5CFA75CF0A /* Pods-AngelHackDarkWire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngelHackDarkWire.release.xcconfig"; path = "Pods/Target Support Files/Pods-AngelHackDarkWire/Pods-AngelHackDarkWire.release.xcconfig"; sourceTree = "<group>"; };
+		8A91E43C15BF32BBE3FF5184 /* Pods-AngelHackDarkWire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngelHackDarkWire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AngelHackDarkWire/Pods-AngelHackDarkWire.debug.xcconfig"; sourceTree = "<group>"; };
+		ED35023E20D56E45005BFC76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -38,11 +45,12 @@
 		ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraConfig.swift; sourceTree = "<group>"; };
 		EDAB19E120D4A6AD00573020 /* AngelHackDarkWire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHackDarkWire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB19E420D4A6AD00573020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDAB19E620D4A6AD00573020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDAB19E620D4A6AD00573020 /* DialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialViewController.swift; sourceTree = "<group>"; };
 		EDAB19E920D4A6AD00573020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDAB19EB20D4A6AD00573020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDAB19EE20D4A6AD00573020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDAB19F020D4A6AD00573020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDEDE8420D58F210002A8CE /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,44 @@
 				ED878A3020D4CB3300DC3AC3 /* CoreMedia.framework in Frameworks */,
 				ED878A2E20D4CB2C00DC3AC3 /* CoreTelephony.framework in Frameworks */,
 				ED878A2C20D4CB1A00DC3AC3 /* libresolv.tbd in Frameworks */,
+				B001C1E1CBFB99271FC85FC6 /* Pods_AngelHackDarkWire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490411A07B830980E641D717 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A91E43C15BF32BBE3FF5184 /* Pods-AngelHackDarkWire.debug.xcconfig */,
+				7EB680D69A190B5CFA75CF0A /* Pods-AngelHackDarkWire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED35023C20D56DFC005BFC76 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				EDAB19E420D4A6AD00573020 /* AppDelegate.swift */,
+				EDAB19EB20D4A6AD00573020 /* Assets.xcassets */,
+				EDAB19ED20D4A6AD00573020 /* LaunchScreen.storyboard */,
+				EDAB19F020D4A6AD00573020 /* Info.plist */,
+				ED878A3F20D4CC8200DC3AC3 /* agoraBridginHeader.h */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		ED35023D20D56E20005BFC76 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED35023E20D56E45005BFC76 /* LoginViewController.swift */,
+				EDAB19E620D4A6AD00573020 /* DialViewController.swift */,
+				EDDEDE8420D58F210002A8CE /* CallViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		ED878A2320D4CA9300DC3AC3 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +124,7 @@
 				ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */,
 				ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */,
 				ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */,
+				7D79160520AB016EB4146A74 /* Pods_AngelHackDarkWire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,6 +135,7 @@
 				EDAB19E320D4A6AD00573020 /* AngelHackDarkWire */,
 				EDAB19E220D4A6AD00573020 /* Products */,
 				ED878A2A20D4CB1A00DC3AC3 /* Frameworks */,
+				490411A07B830980E641D717 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,15 +150,11 @@
 		EDAB19E320D4A6AD00573020 /* AngelHackDarkWire */ = {
 			isa = PBXGroup;
 			children = (
-				ED878A2320D4CA9300DC3AC3 /* frameworks */,
-				EDAB19E420D4A6AD00573020 /* AppDelegate.swift */,
-				EDAB19E620D4A6AD00573020 /* ViewController.swift */,
+				ED35023D20D56E20005BFC76 /* Controllers */,
 				EDAB19E820D4A6AD00573020 /* Main.storyboard */,
-				EDAB19EB20D4A6AD00573020 /* Assets.xcassets */,
-				EDAB19ED20D4A6AD00573020 /* LaunchScreen.storyboard */,
-				EDAB19F020D4A6AD00573020 /* Info.plist */,
 				ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */,
-				ED878A3F20D4CC8200DC3AC3 /* agoraBridginHeader.h */,
+				ED35023C20D56DFC005BFC76 /* misc */,
+				ED878A2320D4CA9300DC3AC3 /* frameworks */,
 			);
 			path = AngelHackDarkWire;
 			sourceTree = "<group>";
@@ -128,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDAB19F320D4A6AD00573020 /* Build configuration list for PBXNativeTarget "AngelHackDarkWire" */;
 			buildPhases = (
+				5247AE2174747DA1A3F621CD /* [CP] Check Pods Manifest.lock */,
 				EDAB19DD20D4A6AD00573020 /* Sources */,
 				EDAB19DE20D4A6AD00573020 /* Frameworks */,
 				EDAB19DF20D4A6AD00573020 /* Resources */,
+				3A304BA5769803D25560AA54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,13 +228,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A304BA5769803D25560AA54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AngelHackDarkWire/Pods-AngelHackDarkWire-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AngelHackDarkWire/Pods-AngelHackDarkWire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5247AE2174747DA1A3F621CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AngelHackDarkWire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDAB19DD20D4A6AD00573020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDAB19E720D4A6AD00573020 /* ViewController.swift in Sources */,
+				ED35023F20D56E45005BFC76 /* LoginViewController.swift in Sources */,
+				EDAB19E720D4A6AD00573020 /* DialViewController.swift in Sources */,
 				EDAB19E520D4A6AD00573020 /* AppDelegate.swift in Sources */,
+				EDDEDE8520D58F210002A8CE /* CallViewController.swift in Sources */,
 				ED9C5AC620D4C69E0034F752 /* AgoraConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +415,7 @@
 		};
 		EDAB19F420D4A6AD00573020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A91E43C15BF32BBE3FF5184 /* Pods-AngelHackDarkWire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,7 +424,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
 				);
-				INFOPLIST_FILE = AngelHackDarkWire/Info.plist;
+				INFOPLIST_FILE = AngelHackDarkWire/misc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,7 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrainDump.AngelHackDarkWire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/agoraBridginHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/misc/agoraBridginHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +441,7 @@
 		};
 		EDAB19F520D4A6AD00573020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB680D69A190B5CFA75CF0A /* Pods-AngelHackDarkWire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,7 +450,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
 				);
-				INFOPLIST_FILE = AngelHackDarkWire/Info.plist;
+				INFOPLIST_FILE = AngelHackDarkWire/misc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,7 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrainDump.AngelHackDarkWire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/agoraBridginHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/misc/agoraBridginHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

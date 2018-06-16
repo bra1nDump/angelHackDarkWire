@@ -1,87 +1,42 @@
 //
-//  ViewController.swift
+//  CallViewController.swift
 //  AngelHackDarkWire
 //
-//  Created by KirillDubovitskiy on 6/15/18.
+//  Created by KirillDubovitskiy on 6/16/18.
 //  Copyright © 2018 Kirill Dubovitskiy. All rights reserved.
 //
 
 import UIKit
-import Speech
-import AVFoundation
 import AgoraSigKit
+import Speech
 
-class ViewController: UIViewController {
-    @IBOutlet weak var userNicknameTextField: UITextField!
-    @IBOutlet weak var calleeUserNameTextField: UITextField!
-    
-    @IBOutlet weak var callButton: UIButton!
-
+class CallViewController: UIViewController {
+    var agoraAPI: AgoraAPI!
+    var calleeAccount: String!
     
     let audioEngine = AVAudioEngine.init()
-
+    let synthesizer = AVSpeechSynthesizer.init()
+    
     let recognitionRequest = SFSpeechAudioBufferRecognitionRequest.init()
     let speechRecognizer = SFSpeechRecognizer.init()
-    
-    // --------- agora -------------
-    /* Initialize the SDK. */
-    let agoraSignalKit = AgoraAPI.getInstanceWithoutMedia(AgoraConfig.appID.rawValue)!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        requestRecognitionAuthorization()
+
+        synthesizer.delegate = self
+        joinCall()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func requestRecognitionAuthorization() {
-        SFSpeechRecognizer.requestAuthorization { authStatus in
-            /* The callback may not be called on the main thread. Add an
-             operation to the main queue to update the record button's state.
-             */
-            OperationQueue.main.addOperation {
-                switch authStatus {
-                case .authorized:
-                    self.callButton.isEnabled = true
-                case .denied:
-                    self.callButton.isEnabled = false
-                    self.callButton.setTitle("User denied access to speech recognition", for: .disabled)
-                case .restricted:
-                    self.callButton.isEnabled = false
-                    self.callButton.setTitle("Speech recognition restricted on this device", for: .disabled)
-                case .notDetermined:
-                    self.callButton.isEnabled = false
-                    self.callButton.setTitle("Speech recognition not yet authorized", for: .disabled)
-                }
-            }
-        }
-    }
-    
-    func loginToAgora() {
-        /* Set the onLoginSuccess callback. */
-        agoraSignalKit.onLoginSuccess = { (uid,fd) -> () in
-            /* Your code. */
-        }
-        
-        /* Set the onLoginFailed callback. */
-        agoraSignalKit.onLoginFailed = {(ecode) -> () in
-            /* Your code. */
-        }
-        
-        /* Set the onMessageInstantReceive callback. */
-        agoraSignalKit.onMessageInstantReceive = { (account, uid, msg) -> () in
-            /* Your code. */
-        }
-        
-    }
+}
 
-    func startRecognition() {
-        speechRecognizer?.delegate = self
+extension CallViewController {
+    func joinCall() {
         recognitionRequest.shouldReportPartialResults = true
+        
         
         let recordingBus: AVAudioNodeBus = 0
         let recordingNode = audioEngine.inputNode
@@ -99,10 +54,33 @@ class ViewController: UIViewController {
         }
         
         speechRecognizer?.recognitionTask(with: recognitionRequest, delegate: self)
+        
+        agoraAPI.onMessageInstantReceive = { (account, uid, message) in
+            guard let message = message else {
+                return
+            }
+            
+            print("recieved message: ", message, " from account: ", account)
+            
+            DispatchQueue.main.async {
+                let utterance = AVSpeechUtterance.init(string: message)
+                self.synthesizer.speak(utterance)
+            }
+        }
+        
+        /* Set the onMessageSendSuccess callback. */
+        agoraAPI.onMessageSendSuccess = { (messageID) -> () in
+            print("message send successfully: ", messageID!)
+        }
+        
+        /* Set the onMessageSendError callback. */
+        agoraAPI.onMessageSendError = { (messageID, ecode) -> () in
+            print("message send failed: ", messageID!)
+        }
     }
 }
 
-extension ViewController: SFSpeechRecognitionTaskDelegate {
+extension CallViewController: SFSpeechRecognitionTaskDelegate {
     // Called when the task first detects speech in the source audio
     func speechRecognitionDidDetectSpeech(_ task: SFSpeechRecognitionTask) {
         print("speechRecognitionDidDetectSpeech")
@@ -112,8 +90,10 @@ extension ViewController: SFSpeechRecognitionTaskDelegate {
     // Called for all recognitions, including non-final hypothesis
     func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didHypothesizeTranscription transcription: SFTranscription) {
         print("didHypothesizeTranscription")
-        if let newSegment = transcription.segments.last {
-            print(newSegment)
+        if let newWord = transcription.segments.last {
+            print("newWord: ", newWord.substring)
+            print("sending to account: ", calleeAccount)
+            agoraAPI.messageInstantSend(calleeAccount, uid: 0, msg: newWord.substring, msgID: nil)
         }
     }
     
@@ -140,19 +120,36 @@ extension ViewController: SFSpeechRecognitionTaskDelegate {
     // If successfully is false, the error property of the task will contain error information
     func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishSuccessfully successfully: Bool) {
         print("task didFinishSuccessfully")
+        
+        speechRecognizer?.recognitionTask(with: recognitionRequest, delegate: self)
     }
 }
 
-extension ViewController {
-    @IBAction func callButtonPressed(_ sender: Any) {
-        startRecognition()
+extension CallViewController: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        print("synthesizer didStart")
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        print("synthesizer didFinish")
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
+        print("synthesizer didPause")
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {
+        print("synthesizer didContinue")
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        print("synthesizer didCancel")
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        print("synthesizer willSpeakRangeOfSpeechString")
     }
 }
 
-extension ViewController: SFSpeechRecognizerDelegate {
-    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer,
-                          availabilityDidChange available: Bool) {
-        print("availabilityDidChange", available)
-    }
-}
+
 
