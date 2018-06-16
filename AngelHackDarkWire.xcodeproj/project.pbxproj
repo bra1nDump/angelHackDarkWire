@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED878A2C20D4CB1A00DC3AC3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */; };
+		ED878A2E20D4CB2C00DC3AC3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */; };
+		ED878A3020D4CB3300DC3AC3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */; };
+		ED878A3220D4CB3900DC3AC3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3120D4CB3900DC3AC3 /* CoreMotion.framework */; };
+		ED878A3420D4CB4200DC3AC3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3320D4CB4200DC3AC3 /* VideoToolbox.framework */; };
+		ED878A3620D4CB4A00DC3AC3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3520D4CB4A00DC3AC3 /* AudioToolbox.framework */; };
+		ED878A3820D4CB5600DC3AC3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3720D4CB5600DC3AC3 /* libc++.tbd */; };
+		ED878A3A20D4CB5C00DC3AC3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3920D4CB5C00DC3AC3 /* AVFoundation.framework */; };
+		ED878A3E20D4CC1900DC3AC3 /* AgoraSigKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED878A3D20D4CC1900DC3AC3 /* AgoraSigKit.framework */; };
+		ED9C5AC620D4C69E0034F752 /* AgoraConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */; };
 		EDAB19E520D4A6AD00573020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB19E420D4A6AD00573020 /* AppDelegate.swift */; };
 		EDAB19E720D4A6AD00573020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB19E620D4A6AD00573020 /* ViewController.swift */; };
 		EDAB19EA20D4A6AD00573020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB19E820D4A6AD00573020 /* Main.storyboard */; };
@@ -15,6 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		ED878A3120D4CB3900DC3AC3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		ED878A3320D4CB4200DC3AC3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		ED878A3520D4CB4A00DC3AC3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ED878A3720D4CB5600DC3AC3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		ED878A3920D4CB5C00DC3AC3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ED878A3D20D4CC1900DC3AC3 /* AgoraSigKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraSigKit.framework; sourceTree = "<group>"; };
+		ED878A3F20D4CC8200DC3AC3 /* agoraBridginHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agoraBridginHeader.h; sourceTree = "<group>"; };
+		ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraConfig.swift; sourceTree = "<group>"; };
 		EDAB19E120D4A6AD00573020 /* AngelHackDarkWire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHackDarkWire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB19E420D4A6AD00573020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB19E620D4A6AD00573020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +50,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED878A3A20D4CB5C00DC3AC3 /* AVFoundation.framework in Frameworks */,
+				ED878A3E20D4CC1900DC3AC3 /* AgoraSigKit.framework in Frameworks */,
+				ED878A3820D4CB5600DC3AC3 /* libc++.tbd in Frameworks */,
+				ED878A3620D4CB4A00DC3AC3 /* AudioToolbox.framework in Frameworks */,
+				ED878A3420D4CB4200DC3AC3 /* VideoToolbox.framework in Frameworks */,
+				ED878A3220D4CB3900DC3AC3 /* CoreMotion.framework in Frameworks */,
+				ED878A3020D4CB3300DC3AC3 /* CoreMedia.framework in Frameworks */,
+				ED878A2E20D4CB2C00DC3AC3 /* CoreTelephony.framework in Frameworks */,
+				ED878A2C20D4CB1A00DC3AC3 /* libresolv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED878A2320D4CA9300DC3AC3 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED878A3D20D4CC1900DC3AC3 /* AgoraSigKit.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		ED878A2A20D4CB1A00DC3AC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED878A3920D4CB5C00DC3AC3 /* AVFoundation.framework */,
+				ED878A3720D4CB5600DC3AC3 /* libc++.tbd */,
+				ED878A3520D4CB4A00DC3AC3 /* AudioToolbox.framework */,
+				ED878A3320D4CB4200DC3AC3 /* VideoToolbox.framework */,
+				ED878A3120D4CB3900DC3AC3 /* CoreMotion.framework */,
+				ED878A2F20D4CB3300DC3AC3 /* CoreMedia.framework */,
+				ED878A2D20D4CB2C00DC3AC3 /* CoreTelephony.framework */,
+				ED878A2B20D4CB1A00DC3AC3 /* libresolv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDAB19D820D4A6AD00573020 = {
 			isa = PBXGroup;
 			children = (
 				EDAB19E320D4A6AD00573020 /* AngelHackDarkWire */,
 				EDAB19E220D4A6AD00573020 /* Products */,
+				ED878A2A20D4CB1A00DC3AC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +108,15 @@
 		EDAB19E320D4A6AD00573020 /* AngelHackDarkWire */ = {
 			isa = PBXGroup;
 			children = (
+				ED878A2320D4CA9300DC3AC3 /* frameworks */,
 				EDAB19E420D4A6AD00573020 /* AppDelegate.swift */,
 				EDAB19E620D4A6AD00573020 /* ViewController.swift */,
 				EDAB19E820D4A6AD00573020 /* Main.storyboard */,
 				EDAB19EB20D4A6AD00573020 /* Assets.xcassets */,
 				EDAB19ED20D4A6AD00573020 /* LaunchScreen.storyboard */,
 				EDAB19F020D4A6AD00573020 /* Info.plist */,
+				ED9C5AC520D4C69E0034F752 /* AgoraConfig.swift */,
+				ED878A3F20D4CC8200DC3AC3 /* agoraBridginHeader.h */,
 			);
 			path = AngelHackDarkWire;
 			sourceTree = "<group>";
@@ -91,7 +148,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Kirill Dubovitskiy";
 				TargetAttributes = {
 					EDAB19E020D4A6AD00573020 = {
@@ -138,6 +195,7 @@
 			files = (
 				EDAB19E720D4A6AD00573020 /* ViewController.swift in Sources */,
 				EDAB19E520D4A6AD00573020 /* AppDelegate.swift in Sources */,
+				ED9C5AC620D4C69E0034F752 /* AgoraConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +235,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +294,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +302,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -276,10 +338,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A55978949T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
+				);
 				INFOPLIST_FILE = AngelHackDarkWire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrainDump.AngelHackDarkWire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/agoraBridginHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -291,10 +362,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A55978949T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
+				);
 				INFOPLIST_FILE = AngelHackDarkWire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AngelHackDarkWire/frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BrainDump.AngelHackDarkWire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/agoraBridginHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
